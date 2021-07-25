@@ -1,6 +1,7 @@
 import json
 from .models import *
 
+
 def cookieCart(request):
     #Create empty cart for now for non-logged in user
 	try:
@@ -81,3 +82,4 @@ def guestOrder(request, data):
 			quantity=(item['quantity'] if item['quantity']>0 else -1*item['quantity']), # negative quantity = freebies
 		)
 	return customer, order
+
